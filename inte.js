@@ -1,8 +1,6 @@
 /*
 A quick mock-up I made after seeing the nav bar at this site: http://snipcart.com/
 */
-
-
 var $window   = $(window),
     height    = $window.height(),
     width     = $window.width(),
@@ -23,7 +21,7 @@ function sticky(){
         'transition':'.5s'
       });
     }, 200);
-alert("v");
+
   } else {
     $('#nav_wrap').removeClass('sticky');
     $('nav').removeClass('nav_animate');
@@ -41,7 +39,7 @@ alert("v");
 }
 
 $window.on('scroll', sticky);
-alert("f");
+
 //Navigational Menu
 $('nav a').click(function(a){
   var menuPlace = $(this).index();
@@ -50,4 +48,3 @@ $('nav a').click(function(a){
     scrollTop : $('section').eq(menuPlace).offset().top - $('nav').height()
   }, 700);
 });
-alert("hola?");
